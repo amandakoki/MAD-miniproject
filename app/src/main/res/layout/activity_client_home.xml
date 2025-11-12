@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical|space_between"
+            android:gravity="center_vertical"
             android:paddingVertical="8dp"
             android:background="@android:color/white"
             android:elevation="4dp"
@@ -37,7 +37,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:weightSum="3"
                 android:layout_marginHorizontal="8dp">
 
                 <Button
@@ -125,58 +124,48 @@
         </LinearLayout>
 
         <!-- Category Buttons -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="16dp"
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="3">
+            android:scrollbars="none"
+            android:layout_marginTop="16dp">
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none"
-                android:fillViewport="true"
-                android:horizontalScrollBarEnabled="false">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                <Button
+                    android:text="Restaurants"
+                    android:backgroundTint="#FF6B00"
+                    android:textColor="@android:color/white"
+                    android:layout_marginHorizontal="6dp" />
 
-                    <Button
-                        android:text="Restaurants"
-                        android:backgroundTint="#FF6B00"
-                        android:textColor="@android:color/white"
-                        android:layout_marginHorizontal="6dp" />
+                <Button
+                    android:text="Hotels"
+                    android:backgroundTint="#FF6B00"
+                    android:textColor="@android:color/white"
+                    android:layout_marginHorizontal="6dp" />
 
-                    <Button
-                        android:text="Hotels"
-                        android:backgroundTint="#FF6B00"
-                        android:textColor="@android:color/white"
-                        android:layout_marginHorizontal="6dp" />
+                <Button
+                    android:text="Things to do"
+                    android:backgroundTint="#FF6B00"
+                    android:textColor="@android:color/white"
+                    android:layout_marginHorizontal="6dp" />
 
-                    <Button
-                        android:text="Things to do"
-                        android:backgroundTint="#FF6B00"
-                        android:textColor="@android:color/white"
-                        android:layout_marginHorizontal="6dp" />
+                <Button
+                    android:text="BnBs"
+                    android:backgroundTint="#FF6B00"
+                    android:textColor="@android:color/white"
+                    android:layout_marginHorizontal="6dp" />
 
-                    <Button
-                        android:text="BnBs"
-                        android:backgroundTint="#FF6B00"
-                        android:textColor="@android:color/white"
-                        android:layout_marginHorizontal="6dp" />
-
-                    <Button
-                        android:text="Outdoors"
-                        android:backgroundTint="#FF6B00"
-                        android:textColor="@android:color/white"
-                        android:layout_marginHorizontal="6dp" />
-                </LinearLayout>
-            </ScrollView>
-        </LinearLayout>
+                <Button
+                    android:text="Outdoors"
+                    android:backgroundTint="#FF6B00"
+                    android:textColor="@android:color/white"
+                    android:layout_marginHorizontal="6dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <!-- Banner -->
         <ImageView
@@ -233,8 +222,8 @@
                     android:layout_marginEnd="10dp"
                     android:scaleType="centerCrop"
                     android:background="@drawable/rounded_corners" />
-
             </LinearLayout>
         </HorizontalScrollView>
+
     </LinearLayout>
 </ScrollView>
