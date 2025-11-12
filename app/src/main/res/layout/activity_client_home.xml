@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|space_between"
+            android:paddingVertical="8dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:paddingHorizontal="10dp">
+
+            <!-- Logo -->
+            <TextView
+                android:id="@+id/textLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VENUE~WISE"
+                android:textColor="#FF6B00"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Middle Nav Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_marginHorizontal="8dp">
+
+                <Button
+                    android:id="@+id/btnNearYou"
+                    android:text="Near You"
+                    android:backgroundTint="#FFF3E0"
+                    android:textColor="#FF6B00"
+                    android:layout_marginHorizontal="4dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnDiscover"
+                    android:text="Discover"
+                    android:backgroundTint="#FFF3E0"
+                    android:textColor="#FF6B00"
+                    android:layout_marginHorizontal="4dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnReview"
+                    android:text="Review"
+                    android:backgroundTint="#FFF3E0"
+                    android:textColor="#FF6B00"
+                    android:layout_marginHorizontal="4dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Icons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/btnNotifications"
+                    android:src="@drawable/ic_notifications"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Notifications" />
+
+                <ImageView
+                    android:id="@+id/btnProfile"
+                    android:src="@drawable/ic_profile_placeholder"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/circle_bg"
+                    android:contentDescription="Profile" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editSearch"
+                android:hint="Search for venues..."
+                android:background="@drawable/search_bg"
+                android:padding="12dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:text="Search"
+                android:backgroundTint="#FF6B00"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Category Buttons -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:fillViewport="true"
+                android:horizontalScrollBarEnabled="false">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:text="Restaurants"
+                        android:backgroundTint="#FF6B00"
+                        android:textColor="@android:color/white"
+                        android:layout_marginHorizontal="6dp" />
+
+                    <Button
+                        android:text="Hotels"
+                        android:backgroundTint="#FF6B00"
+                        android:textColor="@android:color/white"
+                        android:layout_marginHorizontal="6dp" />
+
+                    <Button
+                        android:text="Things to do"
+                        android:backgroundTint="#FF6B00"
+                        android:textColor="@android:color/white"
+                        android:layout_marginHorizontal="6dp" />
+
+                    <Button
+                        android:text="BnBs"
+                        android:backgroundTint="#FF6B00"
+                        android:textColor="@android:color/white"
+                        android:layout_marginHorizontal="6dp" />
+
+                    <Button
+                        android:text="Outdoors"
+                        android:backgroundTint="#FF6B00"
+                        android:textColor="@android:color/white"
+                        android:layout_marginHorizontal="6dp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- Banner -->
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:src="@drawable/banner_sample"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_corners" />
+
+        <!-- Popular Section -->
+        <TextView
+            android:text="Find out what's popular"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF6B00"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:src="@drawable/sample_restaurant"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners" />
+
+                <ImageView
+                    android:src="@drawable/sample_hotel"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners" />
+
+                <ImageView
+                    android:src="@drawable/sample_outdoor"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_corners" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>
